@@ -73,23 +73,23 @@ namespace SIS
                 Location = new Point(110, 20)
             };
 
-            // SUBJECT
+            // subject
             Label lblSubject = new Label() { Text = "Subject", Left = 40, Top = 70, AutoSize = true };
             txtSubject = new TextBox() { Left = 40, Top = 95, Width = 360 };
 
-            // INSTRUCTOR
+            // instructor
             Label lblInstructor = new Label() { Text = "Instructor", Left = 40, Top = 145, AutoSize = true };
             txtInstructor = new TextBox() { Left = 40, Top = 170, Width = 360 };
 
-            // ROOM
+            // room
             Label lblRoom = new Label() { Text = "Room", Left = 40, Top = 220, AutoSize = true };
             txtRoom = new TextBox() { Left = 40, Top = 245, Width = 360 };
 
-            // DAY/TIME
+            // day/time
             Label lblDayTime = new Label() { Text = "Day / Time", Left = 40, Top = 295, AutoSize = true };
             txtDayTime = new TextBox() { Left = 40, Top = 320, Width = 360 };
 
-            // BUTTONS
+            // buttons
             btnSave = CreateBtn("SAVE", 40, 380, Color.MediumSeaGreen);
             btnUpdate = CreateBtn("UPDATE", 155, 380, Color.SteelBlue);
             btnDelete = CreateBtn("DELETE", 270, 380, Color.IndianRed);
@@ -107,7 +107,7 @@ namespace SIS
             };
             btnBack.FlatAppearance.BorderSize = 0;
 
-            // LISTBOX
+            // listbox
             listBox = new ListBox()
             {
                 Left = 40,
@@ -116,7 +116,7 @@ namespace SIS
                 Height = 50
             };
 
-            // EVENTS
+            // events
             btnSave.Click += BtnSave_Click;
             btnUpdate.Click += BtnUpdate_Click;
             btnDelete.Click += BtnDelete_Click;
@@ -140,7 +140,7 @@ namespace SIS
                 }
             };
 
-            // ADD CONTROLS
+            //  add controls
             main.Controls.Add(formTitle);
 
             main.Controls.Add(lblSubject);
@@ -183,7 +183,7 @@ namespace SIS
             return b;
         }
 
-        // ================= SAVE =================
+        // save new schedule
         void BtnSave_Click(object sender, EventArgs e)
         {
             schedules.Add(new Schedule()
@@ -199,7 +199,7 @@ namespace SIS
             ClearFields();
         }
 
-        // ================= UPDATE (NEW) =================
+        // update existing schedule
         void BtnUpdate_Click(object sender, EventArgs e)
         {
             if (selectedIndex >= 0)
@@ -219,7 +219,7 @@ namespace SIS
             }
         }
 
-        // ================= DELETE =================
+        // delete selected schedule
         void BtnDelete_Click(object sender, EventArgs e)
         {
             if (selectedIndex >= 0)

@@ -38,7 +38,7 @@ namespace SIS
             MaximizeBox = false;
             BackColor = Color.FromArgb(120, 81, 169);
 
-            // ================= LEFT PANEL =================
+            // left panel
             Panel left = new Panel()
             {
                 Dock = DockStyle.Left,
@@ -46,9 +46,9 @@ namespace SIS
                 BackColor = Color.FromArgb(90, 60, 140)
             };
 
-            // ❌ REMOVED "MANAGE STUDENTS" LABEL AS REQUESTED
+            
 
-            // ================= MAIN PANEL =================
+            // main panel
             Panel main = new Panel()
             {
                 Size = new Size(450, 440),
@@ -65,7 +65,7 @@ namespace SIS
                 Location = new Point(120, 20)
             };
 
-            // ================= TEXTBOXES =================
+            // textboxes and labels
             Label lblId = new Label() { Text = "Student ID", Left = 40, Top = 70, AutoSize = true };
             txtId = new TextBox() { Left = 40, Top = 95, Width = 360 };
 
@@ -75,7 +75,7 @@ namespace SIS
             Label lblCourse = new Label() { Text = "Course", Left = 40, Top = 220, AutoSize = true };
             txtCourse = new TextBox() { Left = 40, Top = 245, Width = 360 };
 
-            // ================= BUTTONS =================
+            //  buttons
             btnAdd = CreateBtn("ADD", 40, 310, Color.MediumSeaGreen);
             btnUpdate = CreateBtn("UPDATE", 160, 310, Color.SteelBlue);
             btnDelete = CreateBtn("DELETE", 280, 310, Color.IndianRed);
@@ -93,7 +93,7 @@ namespace SIS
             };
             btnBack.FlatAppearance.BorderSize = 0;
 
-            // ================= LISTBOX (MOVED TO LEFT PANEL) =================
+            // listbox 
             listBox = new ListBox()
             {
                 Top = 80,
@@ -103,7 +103,7 @@ namespace SIS
                 Font = new Font("Segoe UI", 10)
             };
 
-            // ================= EVENTS =================
+            // events
             btnAdd.Click += BtnAdd_Click;
             btnUpdate.Click += BtnUpdate_Click;
             btnDelete.Click += BtnDelete_Click;
@@ -126,7 +126,7 @@ namespace SIS
                 }
             };
 
-            // ================= ADD CONTROLS =================
+            // add controls
             main.Controls.Add(formTitle);
 
             main.Controls.Add(lblId);

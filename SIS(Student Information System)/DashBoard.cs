@@ -15,7 +15,7 @@ namespace SIS
 
         void BuildUI()
         {
-            // FORM STYLE
+            // form style
             Text = "SIS DASHBOARD";
             Size = new Size(900, 550);
             StartPosition = FormStartPosition.CenterScreen;
@@ -23,7 +23,7 @@ namespace SIS
             MaximizeBox = false;
             BackColor = Color.FromArgb(120, 81, 169);
 
-            // LEFT PANEL
+            // left panel
             Panel left = new Panel()
             {
                 Dock = DockStyle.Left,
@@ -52,7 +52,7 @@ namespace SIS
             left.Controls.Add(title);
             left.Controls.Add(desc);
 
-            // MAIN PANEL
+            // main panel
             Panel main = new Panel()
             {
                 Size = new Size(350, 420),
@@ -69,7 +69,7 @@ namespace SIS
                 Location = new Point(95, 20)
             };
 
-            // BUTTONS (FIXED FEATURE SET)
+            // buttons
             btnStudents = CreateBtn("MANAGE STUDENTS", 90);
             btnView = CreateBtn("VIEW STUDENTS", 160);
             btnSchedule = CreateBtn("VIEW SCHEDULE", 230);
@@ -88,7 +88,7 @@ namespace SIS
 
             btnBack.FlatAppearance.BorderSize = 0;
 
-            // EVENTS
+            // event
             btnStudents.Click += (s, e) =>
             {
                 new Manageform().Show();
@@ -113,7 +113,7 @@ namespace SIS
                 Hide();
             };
 
-            // ADD CONTROLS
+            // add controlls
             main.Controls.Add(lblDash);
             main.Controls.Add(btnStudents);
             main.Controls.Add(btnView);

@@ -26,7 +26,7 @@ namespace SIS
 
         void BuildUI()
         {
-            // FORM
+            // form
             Text = "View Students";
 
             Size = new Size(900, 550);
@@ -39,7 +39,7 @@ namespace SIS
 
             BackColor = Color.FromArgb(120, 81, 169);
 
-            // LEFT PANEL
+            // left panel
             Panel left = new Panel()
             {
                 Dock = DockStyle.Left,
@@ -79,7 +79,7 @@ namespace SIS
 
             left.Controls.Add(desc);
 
-            // MAIN PANEL
+            // main panel
             Panel main = new Panel()
             {
                 Size = new Size(450, 440),
@@ -102,7 +102,7 @@ namespace SIS
                 Location = new Point(125, 20)
             };
 
-            // LISTBOX
+            // listbox
             listBox = new ListBox()
             {
                 Left = 30,
@@ -116,7 +116,7 @@ namespace SIS
                 Font = new Font("Segoe UI", 10)
             };
 
-            // BACK BUTTON ONLY
+            // back button
             btnBack = new Button()
             {
                 Text = "BACK",
@@ -147,7 +147,7 @@ namespace SIS
                 Hide();
             };
 
-            // ADD CONTROLS
+            // add control
             main.Controls.Add(formTitle);
 
             main.Controls.Add(listBox);

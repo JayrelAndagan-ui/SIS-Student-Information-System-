@@ -25,7 +25,7 @@ namespace SIS
 
         void BuildUI()
         {
-            // FORM
+            // form style
             Text = "SIS Login";
             Size = new Size(900, 550);
             StartPosition = FormStartPosition.CenterScreen;
@@ -33,7 +33,7 @@ namespace SIS
             MaximizeBox = false;
             BackColor = Color.FromArgb(120, 81, 169);
 
-            // LEFT PANEL (BRANDING)
+            // left panel
             Panel left = new Panel()
             {
                 Dock = DockStyle.Left,
@@ -62,7 +62,7 @@ namespace SIS
             left.Controls.Add(title);
             left.Controls.Add(desc);
 
-            // LOGIN PANEL
+            // login panel
             Panel box = new Panel()
             {
                 Size = new Size(350, 350),
@@ -134,7 +134,7 @@ namespace SIS
 
             btnLogin.Click += BtnLogin_Click;
 
-            // ADD CONTROLS
+            // add controls
             box.Controls.Add(lblLogin);
             box.Controls.Add(lblUser);
             box.Controls.Add(txtUser);
